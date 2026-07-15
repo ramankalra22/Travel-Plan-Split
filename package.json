@@ -1,0 +1,29 @@
+{
+  "name": "travel-itinerary-planner",
+  "version": "1.0.0",
+  "description": "Travel Itinerary Planner with Splitwise Feature — Next.js + Supabase + OpenAI",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "db:init": "node scripts/init-db.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "next": "16.2.10",
+    "next-auth": "^4.24.14",
+    "openai": "^6.47.0",
+    "pg": "^8.22.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "uuid": "^14.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.10",
+    "tailwindcss": "^4"
+  }
+}

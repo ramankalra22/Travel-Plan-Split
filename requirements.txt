@@ -1,0 +1,15 @@
+next
+react
+react-dom
+next-auth
+pg
+bcryptjs
+openai
+uuid
+
+# Dev dependencies
+eslint
+eslint-config-next
+tailwindcss
+postcss
+autoprefixer

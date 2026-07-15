@@ -6,7 +6,7 @@ This application allows groups of travelers to plan itineraries, add destination
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
 *   **Next.js 16 App Router**: Rich, animated, responsive UI with glassmorphic cards, custom layouts, and loaders.
 *   **NextAuth Authentication**: Email-based credential authentication with role support (`user` and `admin`).
@@ -16,7 +16,7 @@ This application allows groups of travelers to plan itineraries, add destination
 
 ---
 
-## 🛠️ Tech Stack & Requirements
+ Tech Stack & Requirements
 
 *   **Framework**: Next.js 16 + React 19
 *   **Styling**: TailwindCSS (v4 CSS-first system)
@@ -27,7 +27,7 @@ This application allows groups of travelers to plan itineraries, add destination
 
 ---
 
-## 📂 Project Structure
+ Project Structure
 
 ```
 travel-planner/
@@ -71,7 +71,7 @@ travel-planner/
 
 ---
 
-## 🗄️ Database Setup & Supabase Migration
+##  Database Setup & Supabase Migration
 
 You have **two options** to configure your database:
 
@@ -79,7 +79,7 @@ You have **two options** to configure your database:
 1. Log in to the [Supabase Dashboard](https://supabase.com/).
 2. Create a new project.
 3. Click on the **SQL Editor** tab in the left sidebar.
-4. Copy the entire content of [init.sql](file:///c:/Users/Admin/Desktop/travel%20planner/travel-planner/migrations/init.sql).
+4. Copy the entire content of [init.sql](./migrations/init.sql)
 5. Paste it into the editor and click **Run**.
 6. Verify that the tables (`users`, `trips`, `trip_members`, `destinations`, `activities`, `expenses`, `expense_participants`) are created successfully.
 
@@ -97,11 +97,11 @@ You have **two options** to configure your database:
 
 ---
 
-## 🔌 Connection Pooling & Serverless Considerations
+## Connection Pooling & Serverless Considerations
 
 Since Next.js API Routes run in a serverless environment, database connections can easily saturate if a new connection is spawned on every request. 
 
-We address this in [db.js](file:///c:/Users/Admin/Desktop/travel%20planner/travel-planner/src/lib/db.js) by:
+We address this in [db.js](./src/lib/db.js) by:
 1. Reusing a single `pg.Pool` instance across serverless execution contexts.
 2. Setting `max: 10` connections to prevent scaling spikes from locking the database.
 3. Specifying a low `idleTimeoutMillis: 30000` (30 seconds) to proactively close unused connections.
@@ -109,7 +109,7 @@ We address this in [db.js](file:///c:/Users/Admin/Desktop/travel%20planner/trave
 
 ---
 
-## ⚙️ Environment Variables
+##  Environment Variables
 
 Copy `.env.example` to `.env.local`:
 ```bash
@@ -124,7 +124,7 @@ Fill in the variables:
 
 ---
 
-## 🚀 Running the App Locally
+##  Running the App Locally
 
 1. Install dependencies:
    ```bash
@@ -142,7 +142,7 @@ Fill in the variables:
 
 ---
 
-## ☁️ Vercel Deployment Steps
+##  Vercel Deployment Steps
 
 1. Push your code repository to GitHub/GitLab.
 2. Connect your repository to [Vercel](https://vercel.com).
